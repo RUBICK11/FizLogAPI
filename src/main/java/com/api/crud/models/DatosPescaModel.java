@@ -6,17 +6,17 @@ import java.time.LocalDateTime;
 
 
 @Entity
-@Table(name = "DatosPesca")
+@Table(name = "datospesca")
 public class DatosPescaModel {
 
     public enum Marea{Sube,Baja}
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idCaptura;
+    private Long idcaptura;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario")
+    @JoinColumn(name = "idusuario")
     private UsuariosModel usuario;
 
     @ManyToOne
@@ -24,49 +24,49 @@ public class DatosPescaModel {
     private EspeciesModel especie;
 
     @ManyToOne
-    @JoinColumn(name = "idUbicacion")
+    @JoinColumn(name = "idubicacion")
     private PuntosPescaModel ubiacion;
 
-    @Column(name = "Tamanio")
+    @Column(name = "tamanio")
     private double tamanio;
 
-    @Column(name = "Peso")
+    @Column(name = "peso")
     private double peso;
 
-    @Column(name = "SeHaSoltado")
+    @Column(name = "sehasoltado")
     private Boolean seHaSoltado;
 
-    @Column(name = "Mar")
+    @Column(name = "mar")
     private String mar;
 
-    @Column(name = "SuperaTallaMinima")
+    @Column(name = "superatallaminima")
     private Boolean superaTallaMinima;
 
-    @Column(name = "PresionAtmosferica")
+    @Column(name = "presionatmosferica")
     private double presionAtmosferica;
 
-    @Column(name = "Temporal")
+    @Column(name = "temporal")
     private String temporal;
 
-    @Column(name = "Coeficiente")
+    @Column(name = "coeficiente")
     private double coeficiente;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "Marea")
+    @Column(name = "marea")
     private Marea marea;
 
-    @Column(name = "CeboSeñuelo")
+    @Column(name = "ceboseñuelo")
     private String ceboSeniuelo;
 
-    @Column(name = "FechaHora")
+    @Column(name = "fechahora")
     private LocalDateTime fechaHora;
 
     public Long getIdCaptura() {
-        return idCaptura;
+        return idcaptura;
     }
 
     public void setIdCaptura(Long idCaptura) {
-        this.idCaptura = idCaptura;
+        this.idcaptura = idCaptura;
     }
 
     public LocalDateTime getFechaHora() {

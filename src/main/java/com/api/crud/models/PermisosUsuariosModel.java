@@ -5,30 +5,30 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "PermisosUsuarios")
+@Table(name = "permisosusuarios")
 public class PermisosUsuariosModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_permiso;
+    private Long idpermiso;
 
     @ManyToOne
-    @JoinColumn(name = "id_usaurio_origen")
-    private UsuariosModel id_usuario_origen;
+    @JoinColumn(name = "idusuarioorigen")
+    private UsuariosModel idusuarioorigen;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario_destino")
-    private EspeciesModel id_usuario_destino;
+    @JoinColumn(name = "idusuariodestino")
+    private EspeciesModel idusuariodestino;
 
-    @Column(name = "PuedeVer")
+    @Column(name = "puedever")
     private Boolean puedeVer;
 
-    public Long getId_permiso() {
-        return id_permiso;
+    public Long getIdpermiso() {
+        return idpermiso;
     }
 
-    public void setId_permiso(Long id_permiso) {
-        this.id_permiso = id_permiso;
+    public void setIdpermiso(Long idpermiso) {
+        this.idpermiso = idpermiso;
     }
 
     public Boolean getPuedeVer() {
@@ -39,19 +39,19 @@ public class PermisosUsuariosModel {
         this.puedeVer = puedeVer;
     }
 
-    public EspeciesModel getId_usuario_destino() {
-        return id_usuario_destino;
+    public EspeciesModel getIdusuariodestino() {
+        return idusuariodestino;
     }
 
-    public void setId_usuario_destino(EspeciesModel id_usuario_destino) {
-        this.id_usuario_destino = id_usuario_destino;
+    public void setIdusuariodestino(EspeciesModel idusuariodestino) {
+        this.idusuariodestino = idusuariodestino;
     }
 
-    public UsuariosModel getId_usuario_origen() {
-        return id_usuario_origen;
+    public UsuariosModel getIdusuarioorigen() {
+        return idusuarioorigen;
     }
 
-    public void setId_usuario_origen(UsuariosModel id_usuario_origen) {
-        this.id_usuario_origen = id_usuario_origen;
+    public void setIdusuarioorigen(UsuariosModel idusuarioorigen) {
+        this.idusuarioorigen = idusuarioorigen;
     }
 }

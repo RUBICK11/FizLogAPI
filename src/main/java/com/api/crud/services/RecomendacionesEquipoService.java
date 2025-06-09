@@ -31,10 +31,10 @@ public class RecomendacionesEquipoService {
 
         recomendacionEquipo.setTipoPesca(request.getTipoPesca());
         recomendacionEquipo.setUsuario(request.getUsuario());
-        recomendacionEquipo.setTipo_cania(request.getTipo_cania());
-        recomendacionEquipo.setTipo_cebo(request.getTipo_cebo());
-        recomendacionEquipo.setTipo_carrete(request.getTipo_carrete());
-        recomendacionEquipo.setTipo_sedal(request.getTipo_sedal());
+        recomendacionEquipo.setTipocania(request.getTipocania());
+        recomendacionEquipo.setTipocebo(request.getTipocebo());
+        recomendacionEquipo.setTipocarrete(request.getTipocarrete());
+        recomendacionEquipo.setTiposedal(request.getTiposedal());
         recomendacionEquipo.setDescripcion(request.getDescripcion());
         recomendacionEquipo.setLikes(request.getLikes());
 

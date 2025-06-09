@@ -5,29 +5,29 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "Normativa")
+@Table(name = "normativas")
 public class NormativaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idNormativa;
+    private Long idnormativa;
 
     @ManyToOne
-    @JoinColumn(name = "idComunidad")
+    @JoinColumn(name = "idcomunidadesautonomas")
     private ComunidadesAutonomasModel idComunidad;
 
-    @Column(name = "Titulo")
+    @Column(name = "titulo")
     private String titulo;
 
-    @Column(name = "Descripcion")
+    @Column(name = "descripcion")
     private String descripcion;
 
     public Long getIdNormativa() {
-        return idNormativa;
+        return idnormativa;
     }
 
     public void setIdNormativa(Long idNormativa) {
-        this.idNormativa = idNormativa;
+        this.idnormativa = idNormativa;
     }
 
     public String getDescripcion() {

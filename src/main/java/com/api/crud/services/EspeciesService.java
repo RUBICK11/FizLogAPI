@@ -29,12 +29,12 @@ public class EspeciesService {
     public EspeciesModel updateEspeciesById(EspeciesModel request, Long id){
         EspeciesModel especie = especiesRepository.findById(id).get();
 
-        especie.setNombre_comun(request.getNombre_comun());
-        especie.setNombre_cientifico(request.getNombre_cientifico());
-        especie.setTalla_mediterraneo(request.getTalla_mediterraneo());
-        especie.setTalla_canario(request.getTalla_canario());
-        especie.setTalla_cantabrico_nw_golfocadiz(request.getTalla_cantabrico_nw_golfocadiz());
-        especie.setFoto_url(request.getFoto_url());
+        especie.setNombrecomun(request.getNombrecomun());
+        especie.setNombrecientifico(request.getNombrecientifico());
+        especie.setTallamediterraneo(request.getTallamediterraneo());
+        especie.setTallacanario(request.getTallacanario());
+        especie.setTallacantabriconwgolfocadiz(request.getTallacantabriconwgolfocadiz());
+        especie.setFotourl(request.getFotourl());
         especie.setDescripcion(request.getDescripcion());
 
         return especie;

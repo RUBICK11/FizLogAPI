@@ -8,17 +8,17 @@ public class ComunidadesAutonomasModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int idComunidadesAutonomas;
+    private Long idcomunidadesautonomas;
 
     @Column(name = "nombre")
     private String nombre;
 
-    public int getIdComunidadesAutonomas() {
-        return idComunidadesAutonomas;
+    public Long getIdComunidadesAutonomas() {
+        return idcomunidadesautonomas;
     }
 
-    public void setIdComunidadesAutonomas(int idComunidadesAutonomas) {
-        this.idComunidadesAutonomas = idComunidadesAutonomas;
+    public void setIdComunidadesAutonomas(Long idComunidadesAutonomas) {
+        this.idcomunidadesautonomas = idComunidadesAutonomas;
     }
 
     public String getNombre() {

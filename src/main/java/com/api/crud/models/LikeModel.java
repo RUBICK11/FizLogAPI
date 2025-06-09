@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Table(name = "Likes")
+@Table(name = "likes")
 public class LikeModel {
 
     @EmbeddedId
@@ -13,22 +13,20 @@ public class LikeModel {
 
     @ManyToOne
     @MapsId("idUsuario")
-    @JoinColumn(name = "idUsuario")
+    @JoinColumn(name = "idusuario")
     private UsuariosModel idUsuario;
 
     @ManyToOne
     @MapsId("idRecomendacion")
-    @JoinColumn(name = "idRecomendacion")
+    @JoinColumn(name = "idrecomendacion")
     private RecomendacionesEquipoModel idRecomendacion;
 
-    // Constructor vacío
     public LikeModel() {}
 
-    // Constructor completo
     public LikeModel(UsuariosModel usuario, RecomendacionesEquipoModel recomendacion) {
         this.idUsuario = usuario;
         this.idRecomendacion = recomendacion;
-        this.id = new LikeId(usuario.getIdUsuario(), recomendacion.getId_recomendacion());
+        this.id = new LikeId(usuario.getIdUsuario(), recomendacion.getIdrecomendacion());
     }
 
     @Embeddable

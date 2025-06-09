@@ -4,25 +4,25 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "Tecnicas")
+@Table(name = "tecnicas")
 public class TecnicasModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idTecnica;
+    private Long idtecnicapesca;
 
-    @Column(name = "Nombre")
+    @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "Descripcion")
+    @Column(name = "descripcion")
     private String descripcion;
 
     public Long getIdTecnica() {
-        return idTecnica;
+        return idtecnicapesca;
     }
 
     public void setIdTecnica(Long idTecnica) {
-        this.idTecnica = idTecnica;
+        this.idtecnicapesca = idTecnica;
     }
 
     public String getDescripcion() {

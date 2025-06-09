@@ -4,40 +4,40 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "Especies")
+@Table(name = "especies")
 public class EspeciesModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_especie;
+    private Long idespecie;
 
-    @Column(name = "nombre_comun")
-    private String nombre_comun;
+    @Column(name = "nombrecomun")
+    private String nombrecomun;
 
-    @Column(name = "nombre_cientifico")
-    private String nombre_cientifico;
+    @Column(name = "nombrecientifico")
+    private String nombrecientifico;
 
-    @Column(name = "talla_mediterraneo")
-    private int talla_mediterraneo;
+    @Column(name = "tallamediterraneo")
+    private int tallamediterraneo;
 
-    @Column(name = "talla_canario")
-    private int talla_canario;
+    @Column(name = "tallacanario")
+    private int tallacanario;
 
-    @Column(name = "talla_cantabrico_nw_golfocadiz")
-    private int talla_cantabrico_nw_golfocadiz;
+    @Column(name = "tallacantabriconwgolfocadiz")
+    private int tallacantabriconwgolfocadiz;
 
-    @Column(name = "foto_url")
-    private String foto_url;
+    @Column(name = "fotourl")
+    private String fotourl;
 
     @Column(name = "descripcion")
     private String descripcion;
 
-    public Long getId_especie() {
-        return id_especie;
+    public Long getIdespecie() {
+        return idespecie;
     }
 
-    public void setId_especie(Long id_especie) {
-        this.id_especie = id_especie;
+    public void setIdespecie(Long idespecie) {
+        this.idespecie = idespecie;
     }
 
     public String getDescripcion() {
@@ -48,51 +48,51 @@ public class EspeciesModel {
         this.descripcion = descripcion;
     }
 
-    public String getFoto_url() {
-        return foto_url;
+    public String getFotourl() {
+        return fotourl;
     }
 
-    public void setFoto_url(String foto_url) {
-        this.foto_url = foto_url;
+    public void setFotourl(String foto_url) {
+        this.fotourl = foto_url;
     }
 
-    public int getTalla_cantabrico_nw_golfocadiz() {
-        return talla_cantabrico_nw_golfocadiz;
+    public int getTallacantabriconwgolfocadiz() {
+        return tallacantabriconwgolfocadiz;
     }
 
-    public void setTalla_cantabrico_nw_golfocadiz(int talla_cantabrico_nw_golfocadiz) {
-        this.talla_cantabrico_nw_golfocadiz = talla_cantabrico_nw_golfocadiz;
+    public void setTallacantabriconwgolfocadiz(int tallacantabriconwgolfocadiz) {
+        this.tallacantabriconwgolfocadiz = tallacantabriconwgolfocadiz;
     }
 
-    public int getTalla_canario() {
-        return talla_canario;
+    public int getTallacanario() {
+        return tallacanario;
     }
 
-    public void setTalla_canario(int talla_canario) {
-        this.talla_canario = talla_canario;
+    public void setTallacanario(int tallacanario) {
+        this.tallacanario = tallacanario;
     }
 
-    public int getTalla_mediterraneo() {
-        return talla_mediterraneo;
+    public int getTallamediterraneo() {
+        return tallamediterraneo;
     }
 
-    public void setTalla_mediterraneo(int talla_mediterraneo) {
-        this.talla_mediterraneo = talla_mediterraneo;
+    public void setTallamediterraneo(int tallamediterraneo) {
+        this.tallamediterraneo = tallamediterraneo;
     }
 
-    public String getNombre_cientifico() {
-        return nombre_cientifico;
+    public String getNombrecientifico() {
+        return nombrecientifico;
     }
 
-    public void setNombre_cientifico(String nombre_cientifico) {
-        this.nombre_cientifico = nombre_cientifico;
+    public void setNombrecientifico(String nombrecientifico) {
+        this.nombrecientifico = nombrecientifico;
     }
 
-    public String getNombre_comun() {
-        return nombre_comun;
+    public String getNombrecomun() {
+        return nombrecomun;
     }
 
-    public void setNombre_comun(String nombre_comun) {
-        this.nombre_comun = nombre_comun;
+    public void setNombrecomun(String nombrecomun) {
+        this.nombrecomun = nombrecomun;
     }
 }

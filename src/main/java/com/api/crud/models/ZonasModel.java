@@ -4,22 +4,22 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "Zonas")
+@Table(name = "zonas")
 public class ZonasModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idZona;
+    private Long idzona;
 
-    @Column(name = "Tipo")
+    @Column(name = "tipo")
     private String tipo;
 
     public Long getIdZona() {
-        return idZona;
+        return idzona;
     }
 
     public void setIdZona(Long idZona) {
-        this.idZona = idZona;
+        this.idzona = idZona;
     }
 
     public String getTipo() {

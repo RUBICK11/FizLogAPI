@@ -6,46 +6,46 @@ import java.time.LocalDateTime;
 
 
 @Entity
-@Table(name = "PuntosPesca")
+@Table(name = "puntospesca")
 public class PuntosPescaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idUbicacion;
+    private Long idubicacion;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario")
+    @JoinColumn(name = "idusuario")
     private UsuariosModel usuario;
 
     @ManyToOne
-    @JoinColumn(name = "idZona")
+    @JoinColumn(name = "idzona")
     private ZonasModel zona;
 
     @ManyToOne
-    @JoinColumn(name = "idComuniadad")
+    @JoinColumn(name = "idcomunidadesautonomas")
     private ComunidadesAutonomasModel comunidadAutonoma;
 
-    @Column(name = "Latitud")
+    @Column(name = "latitud")
     private double latitud;
 
-    @Column(name = "Longitud")
+    @Column(name = "longitud")
     private double longitud;
 
-    @Column(name = "Descripcion")
+    @Column(name = "descripcion")
     private String descripcion;
 
-    @Column(name = "FechaGuardado")
+    @Column(name = "fechaguardado")
     private LocalDateTime fechaGuardado;
 
-    @Column(name = "NombrePoblacion")
+    @Column(name = "nombrepoblacion")
     private String nombrePoblacion;
 
     public Long getIdUbicacion() {
-        return idUbicacion;
+        return idubicacion;
     }
 
     public void setIdUbicacion(Long idUbicacion) {
-        this.idUbicacion = idUbicacion;
+        this.idubicacion = idUbicacion;
     }
 
     public String getNombrePoblacion() {

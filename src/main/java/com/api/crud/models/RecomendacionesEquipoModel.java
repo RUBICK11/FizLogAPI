@@ -5,45 +5,45 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "RecomendacionesEquipo")
+@Table(name = "recomendacionesequipo")
 public class RecomendacionesEquipoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id_recomendacion;
+    private Long idrecomendacion;
 
     @ManyToOne
-    @JoinColumn(name = "idTipoPesca")
+    @JoinColumn(name = "idtecnicapesca")
     private TecnicasModel tipoPesca;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario")
+    @JoinColumn(name = "idusuario")
     private UsuariosModel usuario;
 
-    @Column(name = "tipo_caña")
-    private String tipo_cania;
+    @Column(name = "tipocaña")
+    private String tipocania;
 
-    @Column(name = "tipo_cebo")
-    private String tipo_cebo;
+    @Column(name = "tipocebo")
+    private String tipocebo;
 
-    @Column(name = "tipo_carrete")
-    private String tipo_carrete;
+    @Column(name = "tipocarrete")
+    private String tipocarrete;
 
-    @Column(name = "tipo_sedal")
-    private String tipo_sedal;
+    @Column(name = "tiposedal")
+    private String tiposedal;
 
-    @Column(name = "Descripcion")
+    @Column(name = "descripcion")
     private String descripcion;
 
-    @Column(name = "Likes")
+    @Column(name = "likes")
     private int likes;
 
-    public Long getId_recomendacion() {
-        return id_recomendacion;
+    public Long getIdrecomendacion() {
+        return idrecomendacion;
     }
 
-    public void setId_recomendacion(Long id_recomendacion) {
-        this.id_recomendacion = id_recomendacion;
+    public void setIdrecomendacion(Long idrecomendacion) {
+        this.idrecomendacion = idrecomendacion;
     }
 
     public int getLikes() {
@@ -62,36 +62,36 @@ public class RecomendacionesEquipoModel {
         this.descripcion = descripcion;
     }
 
-    public String getTipo_sedal() {
-        return tipo_sedal;
+    public String getTiposedal() {
+        return tiposedal;
     }
 
-    public void setTipo_sedal(String tipo_sedal) {
-        this.tipo_sedal = tipo_sedal;
+    public void setTiposedal(String tiposedal) {
+        this.tiposedal = tiposedal;
     }
 
-    public String getTipo_carrete() {
-        return tipo_carrete;
+    public String getTipocarrete() {
+        return tipocarrete;
     }
 
-    public void setTipo_carrete(String tipo_carrete) {
-        this.tipo_carrete = tipo_carrete;
+    public void setTipocarrete(String tipocarrete) {
+        this.tipocarrete = tipocarrete;
     }
 
-    public String getTipo_cebo() {
-        return tipo_cebo;
+    public String getTipocebo() {
+        return tipocebo;
     }
 
-    public void setTipo_cebo(String tipo_cebo) {
-        this.tipo_cebo = tipo_cebo;
+    public void setTipocebo(String tipocebo) {
+        this.tipocebo = tipocebo;
     }
 
-    public String getTipo_cania() {
-        return tipo_cania;
+    public String getTipocania() {
+        return tipocania;
     }
 
-    public void setTipo_cania(String tipo_cania) {
-        this.tipo_cania = tipo_cania;
+    public void setTipocania(String tipocania) {
+        this.tipocania = tipocania;
     }
 
     public UsuariosModel getUsuario() {

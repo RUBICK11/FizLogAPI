@@ -6,35 +6,35 @@ import java.time.LocalDateTime;
 
 
 @Entity
-@Table(name = "Incidencias")
+@Table(name = "incidencias")
 public class IncidenciasModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idIncidencia;
+    private Long idincidencia;
 
     @ManyToOne
-    @JoinColumn(name = "idUsuario")
+    @JoinColumn(name = "idusuario")
     private UsuariosModel usuario;
 
-    @Column(name = "Titulo")
+    @Column(name = "titulo")
     private String titulo;
 
-    @Column(name = "Descripcion")
+    @Column(name = "descripcion")
     private String descirpcion;
 
-    @Column(name = "FechaHora")
+    @Column(name = "fechahora")
     private LocalDateTime fechaHora;
 
-    @Column(name = "Resuelto")
+    @Column(name = "resuelto")
     private Boolean resuelto;
 
     public Long getIdIncidencia() {
-        return idIncidencia;
+        return idincidencia;
     }
 
     public void setIdIncidencia(Long idIncidencia) {
-        this.idIncidencia = idIncidencia;
+        this.idincidencia = idIncidencia;
     }
 
     public Boolean getResuelto() {

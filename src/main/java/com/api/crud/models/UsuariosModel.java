@@ -4,40 +4,40 @@ import jakarta.persistence.*;
 
 
 @Entity
-@Table(name = "Usuarios")
+@Table(name = "usuarios")
 public class UsuariosModel {
 
     public enum Rol{usuario,administrador}
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idUsuario;
+    private Long idusuario;
 
-    @Column(name ="NombreUsusario")
-    private String nombreUsuario;
+    @Column(name ="nombreusuario")
+    private String nombreusuario;
 
-    @Column(name = "Nombre")
+    @Column(name = "nombre")
     private String nombre;
 
-    @Column(name = "Apellido")
+    @Column(name = "apellido")
     private String apellido;
 
-    @Column(name = "Email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "Contrasenia")
+    @Column(name = "contrasenia")
     private String contrasenia;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "Rol")
+    @Column(name = "rol")
     private Rol rol;
 
     public Long getIdUsuario() {
-        return idUsuario;
+        return idusuario;
     }
 
-    public void setIdUsuario(Long idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdUsuario(Long idusuario) {
+        this.idusuario = idusuario;
     }
 
     public Rol getRol() {
@@ -81,10 +81,10 @@ public class UsuariosModel {
     }
 
     public String getNombreUsuario() {
-        return nombreUsuario;
+        return nombreusuario;
     }
 
     public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+        this.nombreusuario = nombreUsuario;
     }
 }

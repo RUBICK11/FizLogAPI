@@ -29,8 +29,8 @@ public class PermisosUsuariosService {
     public PermisosUsuariosModel updatePermisosUsuariosById(PermisosUsuariosModel request, Long id){
         PermisosUsuariosModel permisosUsuarios = permisosUsuariosRepository.findById(id).get();
 
-        permisosUsuarios.setId_usuario_origen(request.getId_usuario_origen());
-        permisosUsuarios.setId_usuario_destino(request.getId_usuario_destino());
+        permisosUsuarios.setIdusuarioorigen(request.getIdusuarioorigen());
+        permisosUsuarios.setIdusuariodestino(request.getIdusuariodestino());
         permisosUsuarios.setPuedeVer(request.getPuedeVer());
 
         return permisosUsuarios;

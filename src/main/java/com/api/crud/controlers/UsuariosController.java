@@ -18,7 +18,6 @@ public class UsuariosController {
     @GetMapping
     public ArrayList<UsuariosModel> getUsuarios() {
         return this.usuariosService.getUsuarios();
-
     }
 
     @PostMapping
